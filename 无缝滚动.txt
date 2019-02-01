@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ÎÞ·ì¹ö¶¯ÂÖ²¥Í¼</title>
+<style type="text/css">
+#container{
+width:300px;
+height:200px;
+border:1px solid red;
+overflow:hidden;
+}
+ul{
+list-style-type:none;
+width:600px;
+border:1px solid green;
+padding:0px;
+}
+
+ul li{
+display:inline-block;
+width:100px;
+height:100px;
+}
+
+img{
+width:100%;
+
+}
+</style>
+</head>
+<body>
+<div id="container">
+<ul id="content">
+<li><img src="lb0.jpg">
+<li><img src="lb1.jpg">
+<li><img src="lb2.jpg">
+<li><img src="lb0.jpg">
+<li><img src="lb1.jpg">
+<li><img src="lb2.jpg">
+</ul>
+</div>
+<script>
+window.onload=function(){
+var obj=document.getElementById("content");
+obj.style.marginLeft=0+"px";
+function move(){
+console.log(obj.style.marginLeft);
+if(parseInt(obj.style.marginLeft)<=-300){
+obj.style.marginLeft=0+"px";
+}else{
+obj.style.marginLeft=parseInt(obj.style.marginLeft)-1+"px";
+}
+}
+setInterval(move,25);
+}
+</script>
+</body>
+</html>
